@@ -25,7 +25,7 @@ int main()
 	LCG g2(a,c, seed, modulus);
 	std::cout << "Params :" << "A : " << a << ", C : " << c << ", X_0 :" << seed << std::endl;
 	std::cout << "Jump ahead for " << std::setw(width) << " l = " << l << " " << std::setw(width) << jump_ahead(mat, l, seed, modulus) << std::endl;;
-	for (int i = 0; i < 30; ++i) {
+	for (int i = 0; i < 100; ++i) {
 		std::cout << i << " LCG value: " << std::setw(width) <<  *(g2) << " Jump Ahead value: " << std::setw(width) <<  jump_ahead(mat, i, seed, modulus) << std::endl;
 		g2++;
 	}
@@ -39,7 +39,7 @@ int main()
 	LCG g1(a_r,c_r, seed_r, modulus_r);
 	std::cout << "Jump ahead for " << std::setw(width) << " l = " << l << " " << std::setw(width) << jump_ahead(mat_r, l, seed_r, modulus_r) << std::endl;;
 	
-	for (int i = 0; i < 30; ++i) {
+	for (int i = 0; i < 100; ++i) {
 		
 		std::cout <<     i  << " LCG value: " << std::setw(width)  << *(g1) << " Jump Ahead value: " << std::setw(width) << jump_ahead(mat_r, i, seed_r, modulus_r) << std::endl;
 		g1++;
